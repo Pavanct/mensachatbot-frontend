@@ -1,0 +1,32 @@
+.list-group-item{
+  background: inherit;
+}
+
+.message {
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 400;
+  margin-left: 10px;
+}
+
+.line-breaker {
+  white-space: pre-line;
+}
+
+.timeform {
+  float: left;
+  width: 100%;
+
+  i {
+    margin-left: 20px;
+  }
+
+  .timestamp{
+    font-size: 0.6em;
+  }
+}
+
+.avatar{
+  width: 50px;
+  margin-right: 20px;
+}

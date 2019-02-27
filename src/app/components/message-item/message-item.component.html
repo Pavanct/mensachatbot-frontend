@@ -1,0 +1,52 @@
+<li class="list-group-item">
+  <div>
+      <img [src]="message.avatar" class="avatar"/> 
+      <div class="timeform">
+          <i class="fa fa-clock-o" aria-hidden="true"></i> <span class="timestamp">at {{message.timestamp | date : 'dd/MM/yyyy'}}</span>
+      </div>
+  </div>
+   <div class="message-types">
+      <div class="message" *ngIf="message.normalFlag">
+          <span class="line-breaker" [innerHtml]="message.content"></span>  
+       </div>
+     
+       <div class="message" *ngIf="message.mensaFlag">
+           <li class="mensa list" *ngFor="let element of message.content">
+             <div>
+               <span style="display: block"><label style="color: indianred">{{ element.name }}</label></span>
+               <span style="display: block"><label>{{ element.address }}</label></span>
+               <span style="display: block"><label>{{ element.hours }}</label></span>
+               <span *ngIf="element.distance">Distance: <label>{{ element.distance }} meters</label></span><br>
+             </div>
+           </li>
+       </div>
+     
+     <div class="message" *ngIf="message.menuFlag">
+      <span  *ngIf="message.mensaName">Here is the menu for <label style="color: indianred">{{ message.mensaName }}!</label><br></span>
+       <li class="menudata" *ngFor="let data of message.content">
+         <div>
+           <span style="color:indianred">Category: </span><label>{{ data.category }}</label><br>
+           <span style="color:indianred">Name: </span><label>{{ data.name }}</label> <br>
+           <span style="color:indianred">Students: </span><label>{{ data.prices.students }}</label> <br>
+           <span style="color:indianred">Others: </span><label>{{ data.prices.others }}</label> <br>
+           <span style="color:indianred">Notes( Diet, Allergens, Additives ): </span><br><label>{{ data.notes }}</label> <br> 
+           
+         </div>
+       </li>
+     </div>
+
+     <div class="message" *ngIf="message.hoursFlag">
+         <div class="hoursdata">
+           <span style="color:indianred"> Date: </span><label>{{ message.content.date | date : 'dd/MM/yyyy' }}</label> <br>
+           <span style="color:indianred">Opens at </span><label>{{ message.content.open.hour }}:{{ message.content.open.minute }}</label>   <br>
+           <span style="color:indianred">Closes at </span><label>{{ message.content.close.hour }}:{{ message.content.close.minute }}</label>  
+          
+         </div>
+      </div>
+   </div>
+  
+  
+</li>
+
+
+
