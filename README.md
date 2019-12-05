@@ -1,4 +1,4 @@
-Mensa ChatBot with Angular 7 & DialogFlow [demo](http://mensachatbot.pavanct.com)
+Mensa ChatBot with Angular 7 & DialogFlow [demo](http://mensabot.pavanct.com)
 
 <p align="center">
   <img src="screenshot.gif" width="70%"/>
