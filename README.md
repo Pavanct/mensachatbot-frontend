@@ -1,5 +1,3 @@
-# SmartBot
-
 Mensa ChatBot with Angular 7 & DialogFlow [demo](http://mensachatbot.pavanct.com)
 
 <p align="center">
